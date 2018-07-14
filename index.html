@@ -1,92 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Giphy Barn</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-    crossorigin="anonymous">
-
-  <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,800" rel="stylesheet">
-
- 
+  <meta charset="UTF-8">
+  <title>Animaltastic</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
 
-  <header class="section">
-    <div class="container"></div>
-    <div class="jumbotron bg-transparent">
-      <h1 class="display-4 text-center">Giphy Barn</h1>
-      <p class="lead text-center">Unlikely Animal Friends</p>
-    </div>
-    </div>
+  <header>
+    <h1>
+      Giphy Barn
+    </h1>
+    <h3>Unlikely Animal Friends</h3>
   </header>
 
-  <section class="section">
-    <div class="container-fluid">
+  <div id="animal-buttons">
 
-      <div class="row">
+  </div>
 
-        <div class="col-lg-8">
-          <div class="card bg-transparent border-0">
-            <div class="card-body">
-              <div id="animal-buttons"></div>
-            </div>
-          </div>
-        </div>
+  <form id="animal-form">
+    <label for="animal-input">Add an animal pair: </label>
+    <input type="text" id="animal-input"><br>
+    <input id="add-animal" type="submit" value="Submit">
+  </form>
 
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <form id="animal-form">
-                <div class="form-group row">
-                  <label for="animal-input" class="col-md-5 lead" id="add-animal">Add an animal pair:</label>
-                  <input type="text" class="col-md-7" id="animal-input">
-                </div>
-                <input id="add-animal" type="submit" value="Submit">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div id="animals">
 
-    </div>
-  </section>
+  </div>
 
-  <section class="section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="card border-0 bg-transparent">
-            <div class="card-body float-left">
-              <div class="d-flex flex-wrap" id="animals"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
- 
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-  crossorigin="anonymous"></script>
-
-  <script src="assets/javascript/script.js"></script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  
 </body>
 </html>

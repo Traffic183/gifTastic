@@ -1,14 +1,18 @@
 body {
  font-family: 'Nanum Gothic', sans-serif; 
   font-weight: bold;
-  background-image: url(../images/barn.jpg);
+  background-image: url(barn.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
+header{
+  text-align: center;
+}
+
 h1 {
-  font-weight: 800 !important;
+  font-weight: 800;
 }
 
 #add-animal {
@@ -17,6 +21,7 @@ h1 {
 
 .animal-item {
   padding: 10px;
+  float: left;
 }
 
 button,
@@ -39,4 +44,13 @@ input[type="submit"]:hover {
 
 button.active {
   background: #063d1b;
+}
+
+#animals {
+  width: 80%;
+}
+
+form {
+  width: 20%;
+  float: right;
 }

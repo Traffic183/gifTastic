@@ -1,21 +1,21 @@
 $(document).ready(function() {
 
   var animals = [
-    "kitten and puppies", "dog and cat", "dog and chimp", "dog and fox", "dog and goat", "goat and horse", "chicken and puppies","elephant and dog", "chimp and tiger", "goat and cat",
-    "deer and dog", "pig and dog", "pig and cat", "cow and dog"
+    "kitten and puppies", "dog and cat", "dog and chimp", "dog and fox", "dog and goat", "goat and horse", "chicken and puppies","elephant and dog", "chimp and tiger", "goat and cat", "deer and dog", "pig and dog", "pig and cat", "cow and dog"
   ];
 
-  function populateButtons(animalArray, classToAdd, areaToAddTo) {
+  function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
     $(areaToAddTo).empty();
 
-    for (var i = 0; i < animalArray.length; i++) {
-      var a = $("<button>");
-      a.addClass(classToAdd);
-      a.attr("data-type", animalArray[i]);
-      a.text(animalArray[i]);
-      $(areaToAddTo).append(a);
+    for (var i = 0; i < arrayToUse.length; i++) {
+      var btn = $("<button>");
+      btn.addClass(classToAdd);
+      btn.attr("data-type", arrayToUse[i]);
+      btn.text(arrayToUse[i]);
+      $(areaToAddTo).append(btn);
     }
   }
+
   $(document).on("click", ".animal-button", function() {
     $("#animals").empty();
     $(".animal-button").removeClass("active");
@@ -33,18 +33,19 @@ $(document).ready(function() {
 
         for (var i = 0; i < results.length; i++) {
           var animalDiv = $("<div class=\"animal-item\">");
+
           var rating = results[i].rating;
+
           var p = $("<p>").text("Rating: " + rating);
+
           var animated = results[i].images.fixed_height.url;
           var still = results[i].images.fixed_height_still.url;
-
           var animalImage = $("<img>");
           animalImage.attr("src", still);
           animalImage.attr("data-still", still);
           animalImage.attr("data-animate", animated);
           animalImage.attr("data-state", "still");
           animalImage.addClass("animal-image");
-
           animalDiv.append(p);
           animalDiv.append(animalImage);
 
