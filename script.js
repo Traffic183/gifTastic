@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
   var animals = [
     "kitten and puppies", "dog and cat", "dog and chimp", "dog and fox", "dog and goat", "goat and horse", "chicken and puppies","elephant and dog", "chimp and tiger", "goat and cat", "deer and dog", "pig and dog", "pig and cat", "cow and dog"
