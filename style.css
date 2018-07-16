@@ -1,7 +1,7 @@
 body {
  font-family: 'Nanum Gothic', sans-serif; 
   font-weight: bold;
-  background-image: url(../images/barn.jpg);
+  background-image: url(barn.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -31,6 +31,7 @@ input[type="submit"] {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  /* background: #659a98; */
   background: #0a662e;
   border: 0;
   border-radius: 5px;
@@ -52,5 +53,4 @@ button.active {
 form {
   width: 20%;
   float: right;
-  padding-top: 20px;
 }
