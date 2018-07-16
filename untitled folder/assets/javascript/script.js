@@ -4,15 +4,15 @@ $(document).ready(function() {
     "kitten and puppies", "dog and cat", "dog and chimp", "dog and fox", "dog and goat", "goat and horse", "chicken and puppies","elephant and dog", "chimp and tiger", "goat and cat", "deer and dog", "pig and dog", "pig and cat", "cow and dog"
   ];
 
-  function populateBtns(animalArray, classToAdd, gifArea) {
-    $(gifArea).empty();
+  function populateBtns(arrayToUse, classToAdd, areaToAddTo) {
+    $(areaToAddTo).empty();
 
     for (var i = 0; i < animalArray.length; i++) {
       var btn = $("<button>");
       btn.addClass(classToAdd);
       btn.attr("data-type", animalArray[i]);
       btn.text(animalArray[i]);
-      $(gifArea).append(btn);
+      $(areaToAddTo).append(btn);
     }
   }
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
     $(this).addClass("active");
 
     var type = $(this).attr("data-type");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q="+type+"&api_key=uP2tkL6qPKhS6E3918EgyOglSGdykcbz&limit=10";
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=uP2tkL6qPKhS6E3918EgyOglSGdykcbz&limit=10";
 
     $.ajax({
       url:queryURL,method: "GET"})
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
           var rating = results[i].rating;
 
-          var gifText = $("<p>").text("Rating: " + rating);
+          var p = $("<p>").text("Rating: " + rating);
 
           var animated = results[i].images.fixed_height.url;
           var still = results[i].images.fixed_height_still.url;
@@ -45,7 +45,7 @@ $(document).ready(function() {
           animalImage.attr("data-state", "still");
           animalImage.addClass("animal-image");
 
-          animalDiv.append(gifText);
+          animalDiv.append(p);
           animalDiv.append(animalImage);
 
           $("#animals").append(animalDiv);
